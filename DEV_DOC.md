@@ -17,13 +17,31 @@ cd inception
 ```
 
 ### 2. Create the secrets
+
 ```bash
 mkdir -p secrets
-echo "your_db_password" > secrets/db_password.txt
-echo "your_root_password" > secrets/db_root_password.txt
-echo "your_admin_password" > secrets/wp_admin_password.txt
-echo "your_user_password" > secrets/wp_user_password.txt
+echo "your_password" > secrets/db_password.txt
+echo "your_password" > secrets/db_root_password.txt
+echo "your_password" > secrets/wp_admin_password.txt
+echo "your_password" > secrets/wp_user_password.txt
+echo "MYSQL_USER=wp_user
+WP_ADMIN=mobougri
+WP_USER=wpuser" > secrets/credentials.txt
 ```
+
+### 3. Configure the .env file
+Create the file `srcs/.env` with the following content:
+```
+DOMAIN_NAME=mobougri.42.fr
+MYSQL_DATABASE=wordpress_db
+MYSQL_USER=wp_user
+MYSQL_HOST=mariadb
+WP_ADMIN=mobougri
+WP_ADMIN_EMAIL=mobougri@student.42.fr
+WP_USER=wpuser
+WP_USER_EMAIL=wpuser@student.42.fr
+```
+> Note: passwords are stored in secrets/ files, not in .env
 
 ### 3. Configure the .env file
 ```bash
