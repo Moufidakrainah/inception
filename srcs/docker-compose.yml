@@ -31,6 +31,8 @@ services:
   nginx:
     build: ./requirements/nginx
     container_name: nginx
+    volumes:
+      - wp_volume:/var/www/wordpress
     networks:
       - inception
     restart: always
