@@ -1,5 +1,6 @@
 services:
   mariadb:
+    image: mariadb
     build: ./requirements/mariadb
     container_name: mariadb
     volumes:
@@ -13,6 +14,7 @@ services:
       - db_password
       - db_root_password
   wordpress:
+    image: wordpress
     build: ./requirements/wordpress
     container_name: wordpress
     volumes:
@@ -29,6 +31,7 @@ services:
       - wp_admin_password
       - wp_user_password
   nginx:
+    image: nginx
     build: ./requirements/nginx
     container_name: nginx
     volumes:
