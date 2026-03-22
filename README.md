@@ -66,5 +66,3 @@ make
 AI was used in this project for:
 - Debugging Docker configuration errors (MariaDB socket issues, PHP-FPM configuration)
 - Understanding Docker concepts (PID 1, secrets, volumes)
-- Writing and fixing shell scripts (init_db.sh, configure_wordpress.sh)
-- Writing this documentation
